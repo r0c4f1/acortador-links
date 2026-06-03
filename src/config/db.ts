@@ -4,6 +4,7 @@ import { DATABASE_URL } from "../enviroment"
 
 export const pool = new Pool({
   connectionString: DATABASE_URL,
+  ssl: true
 });
 
 pool.on('error', (err) => {
