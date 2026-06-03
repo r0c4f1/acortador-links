@@ -88,7 +88,7 @@ async function cargarHistorial() {
             </td>
             <td class="py-2 pr-4 max-w-xs truncate text-gray-600">${e.url_original}</td>
             <td class="py-2 text-center font-medium">${e.clicks}</td>
-            <td class="py-2 text-right text-gray-500 text-xs">${new Date(e.creado_en).toLocaleDateString()}</td>
+            <td class="py-2 text-right text-gray-500 text-xs">${new Date(e.created_at).toLocaleDateString()}</td>
           </tr>
         `).join('')}
       </tbody>

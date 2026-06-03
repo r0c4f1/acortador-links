@@ -40,7 +40,7 @@ export async function incrementarClicks(id: number): Promise<void> {
 
 export async function listarEnlaces(): Promise<Enlace[]> {
   const result = await pool.query(
-    'SELECT * FROM enlaces ORDER BY creado_en DESC'
+    'SELECT * FROM enlaces ORDER BY created_at DESC'
   );
   return result.rows;
 }
