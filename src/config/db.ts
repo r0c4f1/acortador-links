@@ -14,6 +14,5 @@ pool.connect()
   })
   .catch((err) => {
     console.error('Error al conectar a PostgreSQL:', err);
-    process.exit(-1);
   });
 
