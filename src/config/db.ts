@@ -7,7 +7,13 @@ export const pool = new Pool({
   ssl: { rejectUnauthorized: false },
 });
 
-pool.on('error', (err) => {
-  console.error('Error inesperado en el pool de PostgreSQL:', err);
-  process.exit(-1);
-});
+
+pool.connect()
+  .then(() => {
+    console.log('Conexión exitosa a PostgreSQL');
+  })
+  .catch((err) => {
+    console.error('Error al conectar a PostgreSQL:', err);
+    process.exit(-1);
+  });
+
