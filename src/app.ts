@@ -9,3 +9,5 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use('/', linkRoutes);
 
 export default app;
+
+//postgresql://postgres.linjwfjugoiqwjmknoib:XxgAzqxxcLKb0AJQ@aws-1-us-east-2.pooler.supabase.com:5432/postgres
